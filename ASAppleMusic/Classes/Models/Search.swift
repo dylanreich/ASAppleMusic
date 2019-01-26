@@ -100,7 +100,11 @@ public extension ASAppleMusic {
                             let albums = albumsData["data"] as? [[String:Any]] {
                             albums.forEach { albumData in
                                 if let album = albumData["attributes"] as? NSDictionary {
-                                    resultObjects.append(AMAlbum(dictionary: album))
+                                    let a = AMAlbum(dictionary: album)
+                                    if let relationships = album["relationships"] as? [String:Any] {
+                                        a.setRelationshipObjects(relationships)
+                                    }
+                                    resultObjects.append(a)
                                 }
                             }
                         }
@@ -116,7 +120,11 @@ public extension ASAppleMusic {
                             let songs = songsData["data"] as? [[String:Any]] {
                             songs.forEach { songData in
                                 if let song = songData["attributes"] as? NSDictionary {
-                                    resultObjects.append(AMSong(dictionary: song))
+                                    let s = AMSong(dictionary: song)
+                                    if let relationships = song["relationships"] as? [String:Any] {
+                                        s.setRelationshipObjects(relationships)
+                                    }
+                                    resultObjects.append(s)
                                 }
                             }
                         }
