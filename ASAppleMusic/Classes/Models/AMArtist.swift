@@ -37,7 +37,7 @@ public class AMArtist: EVObject {
         ]
     }
 
-    func setRelationshipObjects(_ relationships: [String:Any]) {
+    func setRelationshipObjects(_ relationships: NSDictionary) {
         var relationshipsArray: [AMRelationship] = []
 
         if let albumsRoot = relationships["albums"] as? [String:Any],
@@ -123,7 +123,7 @@ public extension ASAppleMusic {
                         let resource = data.first,
                         let attributes = resource["attributes"] as? NSDictionary {
                         let artist = AMArtist(dictionary: attributes)
-                        if let relationships = resource["relationships"] as? [String:Any] {
+                        if let relationships = resource["relationships"] as? NSDictionary {
                             artist.setRelationshipObjects(relationships)
                         }
                         completion(artist, nil)
@@ -194,7 +194,7 @@ public extension ASAppleMusic {
                         resources.forEach { artistData in
                             if let attributes = artistData["attributes"] as? NSDictionary {
                                 let artist = AMArtist(dictionary: attributes)
-                                if let relationships = artistData["relationships"] as? [String:Any] {
+                                if let relationships = artistData["relationships"] as? NSDictionary {
                                     artist.setRelationshipObjects(relationships)
                                 }
                                 artists?.append(artist)
