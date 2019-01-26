@@ -80,7 +80,11 @@ public extension ASAppleMusic {
                             let artists = artistsData["data"] as? [[String:Any]] {
                             artists.forEach { artistData in
                                 if let artist = artistData["attributes"] as? NSDictionary {
-                                    resultObjects.append(AMArtist(dictionary: artist))
+                                    let a = AMArtist(dictionary: artist)
+                                    if let relationships = artistData["relationships"] as? [String:Any] {
+                                        a.setRelationshipObjects(relationships)
+                                    }
+                                    resultObjects.append(a)
                                 }
                             }
                         }
