@@ -77,6 +77,7 @@
 		F39838498A0F2B988943E823FD8AD7A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EF6CF3A9F8234BB0E650CCC9E8777F /* Foundation.framework */; };
 		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2090EFFBCF166962B700326860E861B /* ResponseSerialization.swift */; };
 		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E18A16B16E37B5150BD7C86FF1A8A2 /* Alamofire.swift */; };
+		FC8C8F7E221AE17C0045F193 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C8F7D221AE17C0045F193 /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -340,6 +341,7 @@
 		FACA40D5F63788136AD817D35A6B5CB6 /* EVReflection-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EVReflection-dummy.m"; sourceTree = "<group>"; };
 		FBB1B64E8C95EB17E639C20619063B77 /* AMChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AMChart.swift; sourceTree = "<group>"; };
 		FBE450D7122C2D5564962F2E0B932FC4 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = index.html; path = docs/docsets/ASAppleMusic.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
+		FC8C8F7D221AE17C0045F193 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		FCEE8F71DE1C1E2C669AC4183F8A934C /* AMAlbum.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = AMAlbum.html; path = docs/docsets/ASAppleMusic.docset/Contents/Resources/Documents/Classes/AMAlbum.html; sourceTree = "<group>"; };
 		FD55098EFA77B09623B847EC302DC388 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -663,6 +665,7 @@
 		C6B3D954FEBC284B67612075559965A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FC8C8F7D221AE17C0045F193 /* Token.swift */,
 				5125285C5956B6E65CF87CBCC74FD6AE /* AMActivity.swift */,
 				B2C39B2398ADDDF1D7F97AD8ECB4D513 /* AMAlbum.swift */,
 				C46F912E99F7961D6123EF7F6E6367EE /* AMAppleCurator.swift */,
@@ -962,6 +965,7 @@
 				BFFFABD4CF174615E8BA5693EB493122 /* AMPlaylist.swift in Sources */,
 				87FAE0742154ED520078FBA3 /* AMLibrarySong.swift in Sources */,
 				605DAE8627F346934B7A09B177140C1D /* AMPreview.swift in Sources */,
+				FC8C8F7E221AE17C0045F193 /* Token.swift in Sources */,
 				87FAE06E2154E47A0078FBA3 /* AMLibraryArtist.swift in Sources */,
 				2D04CCD84C3AA195687CCA8E3CF726AB /* AMRelationship.swift in Sources */,
 				87886DE72153F97600E679B1 /* AMLibraryAlbum.swift in Sources */,
