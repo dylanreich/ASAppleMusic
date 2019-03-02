@@ -12,12 +12,15 @@ import EVReflection
  */
 public class AMLibraryPlaylist: EVObject {
 
+    /// The id of the playlist
+    public var id: String?
+    
     /// (Optional) The playlist artwork
     public var artwork: AMArtwork?
 
     /// (Optional) A description of the playlist
     public var desc: AMEditorialNotes?
-
+    
     /// The localized name of the album
     public var name: String?
 
