@@ -13,7 +13,7 @@ import EVReflection
 public class AMLibraryPlaylist: EVObject {
 
     /// The id of the playlist
-    public var id: String?
+    public var playlistId: String?
     
     /// (Optional) The playlist artwork
     public var artwork: AMArtwork?
@@ -41,7 +41,7 @@ public class AMLibraryPlaylist: EVObject {
 
     /// :nodoc:
     public override func propertyMapping() -> [(keyInObject: String?, keyInResource: String?)] {
-        return [(keyInObject: "desc", keyInResource: "description")]
+        return [(keyInObject: "playlistId", keyInResource: "id"), (keyInObject: "desc", keyInResource: "description")]
     }
 
     /// :nodoc:
