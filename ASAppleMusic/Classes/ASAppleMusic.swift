@@ -167,7 +167,7 @@ public class ASAppleMusic {
             return
         }
         
-        var request = URLRequest(url: URL(string: "https://jamslug-session-dev.vapor.cloud/api/apple")!)
+        var request = URLRequest(url: URL(string: tokenServer)!)
         request.httpMethod = "POST"
         //HTTP Headers
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
