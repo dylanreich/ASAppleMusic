@@ -167,9 +167,6 @@ public class ASAppleMusic {
             return
         }
         
-    completion("eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdMM0NRV0xDWFcifQ.eyJpc3MiOiJVN1A2SkFNVVo5IiwiaWF0IjoxNDkzMjk4MTAwLCJleHAiOjE1NTIwMzUzNjd9.KndKu8wk2XTPSX0NvKLQS3nT7GIZJcMWkdCgJK9qNukmGyUlFog7zCwb6Wnz67COlwViRHwdUyv7zcHByKAzMw")
-        return
-        
         var request = URLRequest(url: URL(string: tokenServer)!)
         request.httpMethod = "POST"
         //HTTP Headers
