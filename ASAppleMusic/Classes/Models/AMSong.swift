@@ -192,7 +192,7 @@ public extension ASAppleMusic {
             Alamofire.SessionManager.default.request(url, headers: headers)
                 .responseJSON { (response) in
                     self.print("[ASAppleMusic] Making Request 🌐: \(url)")
-                    print(response.result.value)
+                    self.print(response.result.value as Any)
                     if let response = response.result.value as? [String:Any],
                         let data = response["data"] as? [[String:Any]],
                         let resource = data.first,
