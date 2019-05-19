@@ -81,8 +81,10 @@ final public class EVReflection {
                 if var value: Any = valid ? dictValue : (v as Any) {
                     if let type: String = types[k as! String] as? String {
                         let t: AnyClass? = swiftClassTypeFromString(type)
-                        if let c = t as? EVCustomReflectable {
-                            value = c.constructWith(value: value)!
+                        if let c = t as? EVCustomReflectable.Type {
+                            if let v = c.constructWith(value: value) {
+                                value = v
+                            }
                         }
                     }
                     setObjectValue(anyObject, key: keyInObject!, theValue: value, typeInObject: types[keyInObject!] as? String, valid: valid, conversionOptions: conversionOptions)
@@ -733,9 +735,9 @@ final public class EVReflection {
             if let value = theValue as? EVRaw {
                 theValue = value.anyRawValue
             } else if let value = theValue as? EVAssociated {
-                let (enumValue, enumType, _) = valueForAny(theValue, key: value.associated.label, anyValue: value.associated.value as Any, conversionOptions: conversionOptions, isCachable: isCachable, parents: parents)
-                valueType = enumType
-                theValue = enumValue
+                //let (enumValue, enumType, _) = valueForAny(theValue, key: value.associated.label, anyValue: value.associated.value as Any, conversionOptions: conversionOptions, isCachable: isCachable, parents: parents)
+                valueType = "Array<Any>"
+                theValue = value.associated.values
             } else if valueType.hasPrefix("Swift.ImplicitlyUnwrappedOptional<") { // Implicitly Unwrapped Optionals are actually fancy enums
                 var subtype: String = String(valueType[(valueType.components(separatedBy: "<") [0] + "<").endIndex...])
                 subtype = String(subtype[..<subtype.index(before: subtype.endIndex)])

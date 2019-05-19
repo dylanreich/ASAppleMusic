@@ -214,7 +214,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ASAppleMusic_Example/Pods-ASAppleMusic_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ASAppleMusic_Example/Pods-ASAppleMusic_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ASAppleMusic/ASAppleMusic.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/EVReflection/EVReflection.framework",
@@ -227,7 +227,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASAppleMusic_Example/Pods-ASAppleMusic_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ASAppleMusic_Example/Pods-ASAppleMusic_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8853D916F61F27F5BC6EBD23 /* [CP] Check Pods Manifest.lock */ = {
