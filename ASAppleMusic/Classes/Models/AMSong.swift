@@ -300,3 +300,9 @@ public extension ASAppleMusic {
     }
 
 }
+
+extension AMSong { //}: Equatable {
+    public static func == (lhs: AMSong, rhs: AMSong) -> Bool {
+        return lhs.playParams?.id == rhs.playParams?.id
+    }
+}
