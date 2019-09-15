@@ -9,7 +9,7 @@ import EVReflection
 /**
  Playlist Type object representation. For more information take a look at [Apple Music API](https://developer.apple.com/documentation/applemusicapi/preview)
  */
-public class AMPreview: EVObject {
+public class AMPreview: EVObject, Codable {
 
     /// The ID of the content to use for playback
     public var url: String?

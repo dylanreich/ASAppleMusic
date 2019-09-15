@@ -9,7 +9,7 @@ import EVReflection
 /**
  EditorialNotes object representation. For more information take a look at [Apple Music API](https://developer.apple.com/documentation/applemusicapi/editorialnotes)
  */
-public class AMEditorialNotes: EVObject {
+public class AMEditorialNotes: EVObject, Codable {
 
     /// Notes shown when the content is being prominently displayed
     public var standard: String?

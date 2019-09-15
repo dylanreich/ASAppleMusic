@@ -6,7 +6,7 @@
 import Foundation
 import EVReflection
 
-public enum AMRelationshipType: String {
+public enum AMRelationshipType: String, Codable {
 
     case activities = "activities"
     case albums = "albums"
@@ -23,7 +23,7 @@ public enum AMRelationshipType: String {
 /**
  Relationship object representation. For more information take a look at [Apple Music API](https://developer.apple.com/documentation/applemusicapi/relationship)
  */
-public class AMRelationship: EVObject {
+public class AMRelationship: EVObject, Codable {
 
     /// One or more destination objects
     public var id: String?

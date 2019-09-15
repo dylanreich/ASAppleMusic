@@ -7,7 +7,7 @@ import Foundation
 import Alamofire
 import StoreKit
 
-public enum Rating: String {
+public enum Rating: String, Codable {
     case clean = "clean"
     case explicit = "explicit"
     case noRating = ""

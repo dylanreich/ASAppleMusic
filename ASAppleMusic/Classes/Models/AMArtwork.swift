@@ -9,7 +9,7 @@ import EVReflection
 /**
  Artwork object representation. For more information take a look at [Apple Music API](https://developer.apple.com/documentation/applemusicapi/artwork)
  */
-public class AMArtwork: EVObject {
+public class AMArtwork: EVObject, Codable {
 
     /// The maximum width available for the image
     public var width: Int?

@@ -10,7 +10,7 @@ import EVReflection
 /**
  Song object representation. For more information take a look at [Apple Music API](https://developer.apple.com/documentation/applemusicapi/song)
  */
-public class AMSong: EVObject {
+public class AMSong: EVObject, Codable {
 
     public var albumName: String?
 
